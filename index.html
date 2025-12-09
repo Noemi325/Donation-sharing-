@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Donation Sharing Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-content">
+    <h1>Donation Sharing Platform</h1>
+    <p class="subtitle">Give unused items a second life — help your community, shrink waste.</p>
+    <div class="hero-actions">
+      <a href="#donate" class="btn primary">Start Donating</a>
+      <a href="#items" class="btn outline">Browse Items</a>
+    </div>
+  </div>
+  <div class="hero-decor decor-1"></div>
+  <div class="hero-decor decor-2"></div>
+</header>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#items">Items</a></li>
+    <li><a href="#donate">Donate</a></li>
+    <li><a href="#stories">Stories</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section id="features" class="section">
+    <h2 class="section-title">Why choose our platform?</h2>
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-emoji">🌱</div>
+        <h3>Reduce Waste</h3>
+        <p>Give items another life and reduce landfill waste.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-emoji">🤝</div>
+        <h3>Help Community</h3>
+        <p>Connect donors with people who truly need them nearby.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-emoji">⚡</div>
+        <h3>Fast & Easy</h3>
+        <p>Upload, describe and your item is discoverable instantly.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-emoji">🔒</div>
+        <h3>Safe & Trusted</h3>
+        <p>Simple moderation & community feedback keep things secure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="items" class="section">
+    <h2 class="section-title">Available Items</h2>
+
+    <div class="controls">
+      <div class="filters">
+        <button class="filter active" data-category="All">All</button>
+        <button class="filter" data-category="Books">Books</button>
+        <button class="filter" data-category="Appliances">Appliances</button>
+        <button class="filter" data-category="Apparel">Apparel</button>
+        <button class="filter" data-category="Others">Others</button>
+      </div>
+
+      <div class="search-wrap">
+        <input id="searchInput" placeholder="Search items / description..." />
+      </div>
+    </div>
+
+    <div id="item-list" class="grid"></div>
+  </section>
+
+  <section id="donate" class="section donate-section">
+    <h2 class="section-title">Donate an Item</h2>
+
+    <form id="donation-form" class="form">
+      <div class="form-group">
+        <label>Item Name *</label>
+        <input name="itemName" required type="text" placeholder="e.g. Cozy winter jacket" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Category *</label>
+          <select name="category" required>
+            <option value="">Select category</option>
+            <option value="Books">Books</option>
+            <option value="Appliances">Appliances</option>
+            <option value="Apparel">Apparel</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Condition</label>
+          <select name="condition">
+            <option value="Good">Good</option>
+            <option value="Like New">Like New</option>
+            <option value="Fair">Fair</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Description *</label>
+        <textarea name="description" required rows="4" placeholder="Describe the item, size, defects, etc."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Upload Image *</label>
+        <input id="itemImage" name="itemImage" accept="image/*" required type="file" />
+        <div id="imagePreview" class="image-preview"></div>
+      </div>
+
+      <div class="form-row small">
+        <div class="form-group">
+          <label>Tags (comma separated)</label>
+          <input name="tags" placeholder="e.g. winter, jacket, men" />
+        </div>
+        <div class="form-group">
+          <label>Mark as Featured</label>
+          <select name="featured">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn primary full">Donate & Add</button>
+    </form>
+  </section>
+
+  <section id="stories" class="section">
+    <h2 class="section-title">Community Stories</h2>
+    <div class="stories-grid">
+      <div class="story-card fade-in">
+        <h4>📚 Books for students</h4>
+        <p>"We donated school books and the teacher was moved to tears — thank you!" — Lina</p>
+      </div>
+      <div class="story-card fade-in">
+        <h4>🧥 Warm coats</h4>
+        <p>"My old coats warmed three families this winter." — Ken</p>
+      </div>
+      <div class="story-card fade-in">
+        <h4>🍳 Kitchen help</h4>
+        <p>"A donated blender saved time for a community kitchen." — Mei</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-content">
+      <div class="about-item fade-in">
+        <h3>Our Mission</h3>
+        <p>We reduce waste by connecting generous donors with people in need.</p>
+      </div>
+      <div class="about-item fade-in">
+        <h3>How it works</h3>
+        <p>Upload your item, add a short description and image, then wait for local requests.</p>
+      </div>
+      <div class="about-item fade-in">
+        <h3>Join Us</h3>
+        <p>Be part of a growing community that makes reuse easy and trusted.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="success-modal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <h3>✅ Donation submitted</h3>
+    <p>Your item is now listed — thank you for donating!</p>
+    <div class="modal-actions">
+      <a class="btn primary" id="modalBack">Back to site</a>
+      <a class="btn outline" href="success.html" id="modalGoto">Go to Success Page</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© 2025 Donation Sharing Platform — Built with care.</p>
+    <small>Data stored locally (localStorage). Replace with API to persist server-side.</small>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
