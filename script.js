@@ -128,10 +128,10 @@ if (donationForm) {
         const formData = new FormData(donationForm);
         
         // 🚨 修正：如果圖片還在讀取中，強制彈出警告
-        if (donationForm.itemImage.value && !currentBase64Image) {
-             alert("請等待圖片載入完成後再提交。");
-             return;
-        }
+     if (itemImageInput.files.length > 0 && !currentBase64Image) {
+    alert("請等待圖片載入完成後再提交。");
+    return;
+}
 
         const newItem = {
             id: Date.now(), 
